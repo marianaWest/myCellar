@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my cellar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body>
+    <div class="wine-container container pt-5 mt-4">
+        <div class="row text-center">
+                <h3>Edit bottle in Cellar 1</h3>  
+        </div>
+        <div class="row p-4">
+         <div class="col p-3 m-0 d-flex flex-column editBottle">
+                <ul>
+                    <% winesPT.forEach(winePT => { %>
+                        <% if(winePT._id == idBottlePT) { %>
+                        <li class="row wine-list-item">
+                            <form action="/edit/<%= winePT._id %>" method="POST">  
+                                <div class="row d-flex flex-row justify-content-between p-2">
+                                    <label for="name">Name</label>  
+                                    <input type="text" name="name" value="<%= winePT.name %>">
+                                </div>      
+                                <div class="row d-flex flex-row justify-content-between p-2">
+                                <label for="vintage" >Vintage</label>
+                                <input type="text" name="vintage" value="<%= winePT.vintage %>">
+                            </div>
+                            <div class="row d-flex flex-row justify-content-between p-2">
+                                <label for="winery">Winery</label>
+                                <input type="text" name="winery" value="<%= winePT.winery %>">
+                               </div>
+                               <div class="row d-flex flex-row justify-content-between p-2">
+                                <label for="region">Region</label>
+                                <input type="text" name="region" value="<%= winePT.region %>">
+                               </div>
+                               <div class="row d-flex flex-row justify-content-between p-2">
+                                <label for="winery">Bottles</label>
+                                <input type="number" name="numberOfBottles" value="<%= winePT.numberOfBottles %>">
+                               </div>
+                               <div class="row d-flex flex-row justify-content-between p-2">             
+                                <p>Wine type</p>
+                                <section class="wineType">
+                                    <section class="red">
+                                        <input type="radio" name="wineType" id="red" value="red" checked>
+                                        <label for="red">red</label>
+                                    </section>
+                               <section class="white">
+                                    <input type="radio" name="wineType" id="white" value="white">
+                                    <label for="white">white</label>
+                               </section>
+                                <section class="other">
+                                    <input type="radio" name="wineType" id="other" value="other">
+                                    <label for="other">other</label>
+                                </section>
+                                </section>
+                            </div>   
+                            <div class="row d-flex flex-row justify-content-end p-2">
+                                <button type="submit" class="confirm">Confirm</button>
+                                <a href="/" class="cancel">Cancel</a>
+                            </form>
+                        </li>
+                                  
+              <div class="row">
+                <% } else { %>
+                    <li class="wine-list-item mx-1">
+                        <div class="wine-list-item-title">
+                            <%= winePT.name %>
+                        </div>
+                        <div>
+                            <%= winePT.winery %>
+                        </div>
+                        <div>
+                            <%= winePT.vintage %>
+                        </div>
+                        <div>
+                            <%= winePT.region %>
+                        </div>
+                        <div>
+                            <%= winePT.numberOfBottles %>
+                        </div>
+                        <div>
+                            <%= winePT.wineType %>
+                        </div>
+                        <a href="/edit/<%= winePT._id %>" class="edit"><span class="fas fa-edit"></span></a>
+                        <a href="/remove/<%= winePT._id %>" class="remove"><span class="fas fa-times"></span></a>
+                    </li>
+                    <% } %>
+                    <% }) %>             
+    </ul>
+    <a href="/" class="arrow"><i class="fas fa-solid fa-arrow-left fa-5x"></i></a>
+
+        </div>     
+        </div>
+         </div>
+        </div>
+       </div>
+    </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "name": "mycellar",
+  "version": "1.0.0",
+  "description": "![myCellar](https://user-images.githubusercontent.com/97693233/217018409-4eb079e3-8488-4680-89f2-de7838d08b72.gif)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Mariana Westphalen",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "mongoose": "^6.7.3"
+  },
+  "devDependencies": {
+    "netlify-cli": "^12.10.0",
+    "nodemon": "^2.0.20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marianaWest/myCellar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/marianaWest/myCellar/issues"
+  },
+  "homepage": "https://github.com/marianaWest/myCellar#readme"
+}

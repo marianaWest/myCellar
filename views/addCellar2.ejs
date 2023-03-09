@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my cellar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid d-flex flex-column align-items-center pt-5 mx-auto addCellar1">
+         
+        <div class="row mt-5 text-center">
+            <h3>Add a bottle to Cellar 2</h3>
+        </div>
+        <div class="col my-4 p-4 wine-container">
+            <form action="/addCellar2" method="POST">
+                     <div class="row mt-3">
+                        <label for="nameBR">Name</label>       
+                        <input type="text" name="nameBR" value="name"> 
+                    </div>
+                    <div class="row">
+                        <label for="wineryBR">Winery</label>
+                        <input type="text" name="wineryBR" value="winery"></input> 
+                    </div>
+                    <div class="row">
+                        <label for="regionBR">Region</label>
+                        <input type="text" name="regionBR" value="region"></input> 
+                    </div>
+                    <div class="row">
+                        <label for="vintageBR" >Vintage</label>
+                        <input type="text" name="vintageBR" value="vintage" placeholder="vintage">
+                    </div>
+                    <div class="row">
+                        <label for="numberOfBottlesbr">Bottles</label>
+                        <input type="number" name="numberOfBottlesBR" id="numberOfBottlesBR" value="0">
+                    </div>
+                    <div class="row mt-3">
+                        <p >Wine type</p>
+                        <section class="wineTypeBR">
+                            <section class="red">
+                                <input type="radio" name="wineTypeBR" id="red" value="red" checked>
+                                <label for="red">red</label>
+                            </section>
+                       <section class="white">
+                            <input type="radio" name="wineTypeBR" id="white" value="white">
+                            <label for="white">white</label>
+                       </section>
+                        <section class="other">
+                            <input type="radio" name="wineTypeBR" id="other" value="other">
+                            <label for="other">other</label>
+                        </section>
+                    </div>
+                    <div class="row mt-4 mx-5 d-flex flex-row justify-content-end">
+                        <button type="submit" class="addBottleButton">+ Add bottle</button>
+                    </div>                
+                </form>
+
+                <div class="row my-3 mx-5">
+                    <a href="/" class="arrow"><i class="fas fa-solid fa-arrow-left fa-5x"></i></a>
+                </div>
+        </div> 
+       
+    </div>
+</body>
+</html>

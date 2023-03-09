@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my cellar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row mt-5 pt-4 text-center title">
+            <h1>My Cellar</h1>
+        </div>
+      
+        <div class="row text-center align-items-center mx-0 mx-lg-3 p-lg-3  d-flex flex-sm-column flex-md-row justify-content-md-between">
+            <div class="col mx-auto mx-md-3 my-2 py-3 wine-container">
+                <h2>Cellar 1</h2>
+                <div class="row mx-auto">
+                        <ul>
+                                <% winePTCol.forEach(winePT => {%>
+                            <li class="wine-list-item">
+                                <div>
+                                    <%= winePT.name %>
+                                </div>
+                                <div>
+                                    <%= winePT.winery %>
+                                </div>
+                                <div>
+                                    <%= winePT.vintage %>
+                                </div>
+                                <div>
+                                    <%= winePT.region %>
+                                </div>
+                                <div>
+                                    <%= winePT.numberOfBottles %>
+                                </div>
+                                <div>
+                                    <%= winePT.wineType %>
+                                </div>
+                                <a href="/edit/<%= winePT._id %>" class="edit"><span class="fas fa-edit"></span></a>
+                                <a href="/remove/<%= winePT._id %>" class="remove"><span class="fas fa-times"></span></a>
+                            </li>
+                            <% }) %>
+                        </ul>
+                        <div class="row d-flex flex-row justify-content-end">
+                            <a href="/addCellar1" class="addBottleButton"><span>+ Add bottle</span></a>
+                        </div>
+                    </div>                    
+                </div>           
+
+                
+            <div class="col mx-auto py-3 mb-3 wine-container">
+                <h2>Cellar 2</h2>
+                <div class="row mx-auto">
+                      <ul>
+                                <% wineBRCol.forEach(wineBR => {%>
+                            <li class="wine-list-item">
+                                <div>
+                                    <%= wineBR.nameBR %>
+                                </div>
+                                <div>
+                                    <%= wineBR.wineryBR %>
+                                </div>
+                                <div>
+                                    <%= wineBR.vintageBR %>
+                                </div>
+                                <div>
+                                    <%= wineBR.regionBR %>
+                                </div>
+                                <div>
+                                    <%= wineBR.numberOfBottlesBR %>
+                                </div>
+                                <div>
+                                    <%= wineBR.wineTypeBR %>
+                                </div>
+                                <a href="/editBR/<%= wineBR._id %>" class="edit"><span class="fas fa-edit"></span></a>
+                                <a href="/removeBR/<%= wineBR._id %>" class="remove"><span class="fas fa-times"></span></a>
+                            </li>
+                            <% }) %>
+                        </ul>
+                           <div class="row d-flex flex-row justify-content-end">
+                            <a href="/addCellar2" class="addBottleButton"><span>+ Add bottle</span></a>
+                           </div>
+          
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+           
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+</body>
+</html>

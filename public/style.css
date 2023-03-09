@@ -1,0 +1,328 @@
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* --cellar-box: rgba(176, 51, 23, 0.4); */
+  --cellar-box: rgba(220, 202, 197, 0.5);
+  --button: rgba(107, 40, 40, 0.8);
+  --wine-list-item: rgba(115, 26, 26, 0.8);
+  --primary-text: rgb(250, 235, 230);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  /* background: rgba(176, 51, 23, 0.2); */
+  background-image: url("background.jpg");
+  background-position: center;
+  /* background-size: cover; */
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.container,
+.row {
+  padding: 0;
+}
+
+.wine-container {
+  color: white;
+  width: 70%;
+  /* max-width: 50vw; */
+  background: var(--cellar-box);
+  border-radius: 20px;
+}
+
+h1 {
+  font-size: 6rem;
+  font-family: "Lobster", cursive;
+  color: var(--primary-text);
+  text-align: center;
+}
+
+h2 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: var(--button);
+  font-size: 3rem;
+}
+
+h3 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: var(--primary-text);
+  font-size: 3rem;
+}
+
+input {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin-bottom: 2px;
+  padding: 5px;
+  border-radius: 5px;
+  height: 20px;
+  width: 90%;
+  font-size: 1.6rem;
+}
+
+textarea {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  display: block;
+  width: 30%;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+ul {
+  list-style: none;
+}
+
+label {
+  font-size: 1.6rem;
+}
+
+.wine-list-item {
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: var(--wine-list-item);
+  display: flex;
+  flex-direction: row;
+  font-size: 1.6rem;
+}
+
+.wine-list-item label {
+  max-width: 30%;
+}
+
+.wine-list-item-content {
+  font-size: 1.8rem;
+}
+
+.wine-header input {
+  width: 30%;
+  border-radius: 5px;
+  border: none;
+}
+
+.wine-list-item input[type="text"] {
+  border: none;
+}
+
+.wine-list-item input[type="text"]:last-of-type {
+  margin-bottom: 10px;
+}
+
+.wine-list-item .confirm {
+  color: var(--wine-list-item);
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: var(--primary-text);
+  margin-left: 5px;
+  margin-bottom: 5px;
+  max-height: 30px;
+  width: 100px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  display: block;
+}
+
+.wine-list-item .cancel {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: var(--wine-list-item);
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: var(--primary-text);
+  margin-left: 5px;
+  margin-bottom: 5px;
+  max-height: 30px;
+  display: block;
+  width: 100px;
+}
+
+.wine-list-item div {
+  flex-grow: 2;
+}
+
+.wine-list-item .edit {
+  color: var(--primary-text);
+  margin-right: 10px;
+  cursor: pointer;
+  margin-left: auto;
+  color: rgb(157, 231, 157);
+}
+
+.wine-list-item .remove {
+  color: var(--primary-text);
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.wineType,
+.wineTypeBR {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.wineType .red,
+.wineType .white,
+.wineType .other {
+  width: 30%;
+}
+
+.wineTypeBR .red,
+.wineTypeBR .white,
+.wineTypeBR .other {
+  width: 30%;
+}
+
+.addBottle {
+  width: 90%;
+  margin: 0 auto;
+  padding-left: 8%;
+}
+
+.addBottleButton {
+  width: 160px;
+  height: 36px;
+  background-color: var(--primary-text);
+  border-radius: 5px;
+  position: relative;
+}
+
+.addBottleButton span {
+  display: inline-block;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: var(--button);
+  font-weight: bold;
+  width: 120px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+}
+
+.addBottleButton button {
+  color: var(--primary-text);
+  width: 120px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+button {
+  color: var(--button);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.addBottleInput label {
+  width: 40%;
+}
+
+.addBottleInput input {
+  width: 58%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.arrow {
+  color: var(--button);
+  cursor: pointer;
+  display: block;
+  text-align: right;
+}
+
+/* .addCellar1 {
+    max-width: 50vw; */
+/* } */
+
+.addCellar1 h3 {
+  color: var(--primary-text);
+}
+
+.addCellar1 label {
+  max-width: 25%;
+  padding-bottom: 5px;
+}
+.addCellar1 input {
+  border: none;
+  max-width: 65%;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  padding: 6px;
+  background-clip: content-box;
+  border: 2px solid white;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked {
+  background-color: var(--primary-text);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 10px;
+}
+
+@media (max-width: 320px) {
+  .wine-container {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 900px) {
+  .wine-container {
+    min-width: 330px;
+  }
+  .wine-list-item {
+    font-size: 1.2rem;
+  }
+  input[type="text"] {
+    font-size: 1.3rem;
+    padding: 10px;
+    line-height: 28px;
+  }
+  .cancel,
+  .confirm {
+    font-size: 1.8rem;
+  }
+}
