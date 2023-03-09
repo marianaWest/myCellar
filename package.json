@@ -17,7 +17,6 @@
     "mongoose": "^6.7.3"
   },
   "devDependencies": {
-    "netlify-cli": "^12.10.0",
     "nodemon": "^2.0.20"
   },
   "repository": {
