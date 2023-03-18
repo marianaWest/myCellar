@@ -122,7 +122,23 @@ label {
   --webkit-user-select: text;
 }
 
+/* testing for Safari */
+.wine-list-item input[type="number"] {
+  border: none;
+  transform: translateZ(0) !important;
+  --webkit-user-select: text;
+}
+
 .wine-list-item input[type="text"]:last-of-type {
+  margin-bottom: 10px;
+  transform: translateZ(0) !important;
+  --webkit-user-select: text;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Safari */
+
+.wine-list-item input[type="number"]:last-of-type {
   margin-bottom: 10px;
   transform: translateZ(0) !important;
   --webkit-user-select: text;
@@ -363,6 +379,18 @@ textarea {
     font-size: 1.2rem;
   }
   input[type="text"] {
+    font-size: 1.3rem;
+    padding: 10px;
+    /* line-height: 28px; */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: Arial, Helvetica, sans-serif;
+    transform: translateZ(0) !important;
+    --webkit-user-select: text;
+  }
+  /* Safari */
+  input[type="number"] {
     font-size: 1.3rem;
     padding: 10px;
     /* line-height: 28px; */
