@@ -45,7 +45,7 @@ h1 {
 h2 {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  color: var(--button);
+  color: var(--primary-text);
   font-size: 3rem;
 }
 
@@ -97,7 +97,23 @@ label {
   background-color: var(--wine-list-item);
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  /* or: flex-flow: row wrap; */
   font-size: 1.6rem;
+}
+
+.wine-list-winery {
+  font-size: 2rem;
+  font-weight: bold;
+  width: 100%;
+  text-align: left;
+}
+.wine-list-region {
+  font-size: 1.6rem;
+  font-weight: normal;
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px solid white;
 }
 
 .wine-list-item label {

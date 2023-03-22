@@ -20,25 +20,26 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
             <h1>My Cellar</h1>
         </div>
       
-        <div class="row text-center align-items-center mx-0 mx-lg-3 p-lg-3  d-flex flex-sm-column flex-md-row justify-content-md-between">
+        <div class="row text-left align-items-center mx-0 mx-lg-3 p-lg-3  d-flex flex-sm-column flex-md-row justify-content-md-between">
             <div class="col mx-auto mx-md-3 my-2 py-3 wine-container">
-                <h2>Cellar 1</h2>
+                <h2 class="text-center">Cellar 1</h2>
                 <div class="row mx-auto">
                         <ul>
                                 <% winePTCol.forEach(winePT => {%>
                             <li class="wine-list-item">
+                                <div class="wine-list-winery">
+                                    <%= winePT.winery %>
+                                </div>
+                                <div class="wine-list-region">
+                                    <%= winePT.region %>
+                                </div>
                                 <div>
                                     <%= winePT.name %>
                                 </div>
                                 <div>
-                                    <%= winePT.winery %>
-                                </div>
-                                <div>
                                     <%= winePT.vintage %>
                                 </div>
-                                <div>
-                                    <%= winePT.region %>
-                                </div>
+                               
                                 <div>
                                     <%= winePT.numberOfBottles %>
                                 </div>
