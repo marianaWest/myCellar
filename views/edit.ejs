@@ -70,12 +70,16 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
               <div class="row">
                 <% } else { %>
                     <li class="wine-list-item mx-1">
+                        <div class="wine-list-winery">
+                            <%= winePT.winery %>
+                        </div>
+                        <div class="wine-list-region">
+                            <%= winePT.region %>
+                        </div>
                         <div class="wine-list-item-title">
                             <%= winePT.name %>
                         </div>
-                        <div>
-                            <%= winePT.winery %>
-                        </div>
+                       
                         <div>
                             <%= winePT.vintage %>
                         </div>

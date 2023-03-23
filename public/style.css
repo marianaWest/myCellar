@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   /* --cellar-box: rgba(176, 51, 23, 0.4); */
-  --cellar-box: rgba(220, 202, 197, 0.5);
+  --cellar-box: rgba(220, 161, 145, 0.8);
   --button: rgba(107, 40, 40, 0.8);
   --wine-list-item: rgba(115, 26, 26, 0.8);
   --primary-text: rgb(250, 235, 230);
@@ -14,8 +14,8 @@ html {
 }
 
 body {
-  /* background: rgba(176, 51, 23, 0.2); */
-  background-image: url("background.jpg");
+  background: rgb(152, 89, 77);
+  /* background-image: url("background.jpg"); */
   background-position: center;
   /* background-size: cover; */
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -47,6 +47,7 @@ h2 {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: var(--primary-text);
   font-size: 3rem;
+  font-weight: bold;
 }
 
 h3 {

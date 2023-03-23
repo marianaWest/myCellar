@@ -74,18 +74,20 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
                                 <div class="row">
                                     <% } else { %>
                                         <li class="wine-list-item">
+                                            <div class="wine-list-winery">
+                                                <%= wineBR.wineryBR %>
+                                            </div>
+                                            <div class="wine-list-region">
+                                                <%= wineBR.regionBR %>
+                                            </div>
                                             <div class="wine-list-item-title">
                                                 <%= wineBR.nameBR %>
                                             </div>
-                                            <div>
-                                                <%= wineBR.wineryBR %>
-                                            </div>
+                                            
                                             <div>
                                                 <%= wineBR.vintageBR %>
                                             </div>
-                                            <div>
-                                                <%= wineBR.regionBR %>
-                                            </div>
+                                            
                                             <div>
                                                 <%= wineBR.numberOfBottlesBR %>
                                             </div>

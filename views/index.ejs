@@ -59,23 +59,24 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
 
                 
             <div class="col mx-auto py-3 mb-3 wine-container">
-                <h2>Cellar 2</h2>
+                <h2 class="text-center">Cellar 2</h2>
                 <div class="row mx-auto">
                       <ul>
                                 <% wineBRCol.forEach(wineBR => {%>
                             <li class="wine-list-item">
+                                <div class="wine-list-winery">
+                                    <%= wineBR.wineryBR %>
+                                </div>
+                                <div class="wine-list-region">
+                                    <%= wineBR.regionBR %>
+                                </div>
                                 <div>
                                     <%= wineBR.nameBR %>
                                 </div>
-                                <div>
-                                    <%= wineBR.wineryBR %>
-                                </div>
-                                <div>
+                                                                <div>
                                     <%= wineBR.vintageBR %>
                                 </div>
-                                <div>
-                                    <%= wineBR.regionBR %>
-                                </div>
+                               
                                 <div>
                                     <%= wineBR.numberOfBottlesBR %>
                                 </div>
