@@ -1,6 +1,6 @@
 # myCellar
 
-![myCellar](https://user-images.githubusercontent.com/97693233/217018409-4eb079e3-8488-4680-89f2-de7838d08b72.gif)
+![myCellar](https://github.com/marianaWest/myCellar/assets/97693233/75038ed1-8706-49b3-a367-30cbfe72eb41)
 
 
 *** This is a work in progress ***
